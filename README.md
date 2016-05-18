@@ -12,7 +12,7 @@ Class to show flash messages.
 
     $title = "Flashmeddelanden"; $app->theme->setTitle($title); $app->theme->addStylesheet('css/flash.css');
 
-    $app->flashMessages->addMessage('Success!', 'success'); $app->flashMessages->addMessage('Info', 'info'); $app->flashMessages->addMessage('Waning!', 'warning'); $app->flashMessages->addMessage('Error!', 'error');
+    $app->flashMessages->addMessage('Success!', 'success'); $app->flashMessages->addMessage('Info', 'info'); $app->flashMessages->addMessage('Warning!', 'warning'); $app->flashMessages->addMessage('Error!', 'error');
 
     $app->views->add('me/page', [ 'content' => $app->flashMessages->getFlashMessages(), ]);
 
