@@ -5,4 +5,4 @@ php:
     - hhvm
 
 script:
-    - phpunit --bootstrap test/config.php --coverage-clover coverage.clover test
+    - phpunit --bootstrap webroot/test/config.php --coverage-clover coverage.clover test
