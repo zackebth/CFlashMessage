@@ -3,6 +3,6 @@ php:
     - 5.5
     - 5.4
     - hhvm
-
-script:
-    - phpunit --bootstrap webroot/test/config.php --coverage-clover coverage.clover test
+ 
+script: 
+    - phpunit --bootstrap webroot/test/config.php test
