@@ -1,20 +1,8 @@
 language: php
-
 php:
-    - 5.5
-    - 5.4
-    - hhvm
-
-env:
-    - CI=true
-    - TRAVIS=true
-
-before_script:
-    - wget https://scrutinizer-ci.com/ocular.phar
-
-script:
-    #- phpunit --bootstrap test/config.php test
-    - phpunit --bootstrap test/config.php --coverage-clover coverage.clover test
-
-after_script:
-    - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+  - '5.4'
+  - '5.5'
+  - '5.6'
+  - '7.0'
+  - hhvm
+  - nightly
