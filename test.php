@@ -1,12 +1,12 @@
 <?php
-namespace Anax\CFlashMessage;
+namespace CFlashMessage;
 class CFlashMessageTest extends \PHPUnit_Framework_TestCase
 {
    /**
     * @runInSeparateProcess
     */
    public function testAddError() {
-       $fm = new \Anax\CFlashMessage\CFlashMessage();
+       $fm = new \CFlashMessage\CFlashMessage();
        $fm->addError('testError');
        $res = $fm->getFlashMessages();
        $exp = "<div id='flashMessage' class='error'>testError</div>";
@@ -16,7 +16,7 @@ class CFlashMessageTest extends \PHPUnit_Framework_TestCase
     * @runInSeparateProcess
     */
    public function testAddSuccess() {
-       $fm = new \Anax\CFlashMessage\CFlashMessage();
+       $fm = new \CFlashMessage\CFlashMessage();
        $fm->addSuccess('testSuccess');
        $res = $fm->getFlashMessages();
        $exp = "<div id='flashMessage' class='success'>testSuccess</div>";
@@ -26,7 +26,7 @@ class CFlashMessageTest extends \PHPUnit_Framework_TestCase
     * @runInSeparateProcess
     */
    public function testAddInfo() {
-       $fm = new \Anax\CFlashMessage\CFlashMessage();
+       $fm = new \CFlashMessage\CFlashMessage();
        $fm->addInfo('testInfo');
        $res = $fm->getFlashMessages();
        $exp = "<div id='flashMessage' class='info'>testInfo</div>";
@@ -36,7 +36,7 @@ class CFlashMessageTest extends \PHPUnit_Framework_TestCase
     * @runInSeparateProcess
     */
    public function testAddWarning() {
-       $fm = new \Anax\CFlashMessage\CFlashMessage();
+       $fm = new \CFlashMessage\CFlashMessage();
        $fm->addWarning('testWarning');
        $res = $fm->getFlashMessages();
        $exp = "<div id='flashMessage' class='warning'>testWarning</div>";
@@ -46,7 +46,7 @@ class CFlashMessageTest extends \PHPUnit_Framework_TestCase
     * @runInSeparateProcess
     */
    public function testGetFlashMessages() {
-       $fm = new \Anax\FlashMessage\CFlashMessage();
+       $fm = new \FlashMessage\CFlashMessage();
        $res = $fm->getFlashMessages();
        $exp = null;
        $this->assertEquals($res, $exp, "HTML flash message missmatch.");
